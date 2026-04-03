@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Lab - Muhammet Batuhan Karanfil</title>
+    <link rel="stylesheet" href="lab-position.css">
+</head>
+<body>
+
+    <!-- FIXED: Sol üst — Ana Sayfaya Dön -->
+    <a href="index.html" class="btn-back">Ana Sayfaya Dön</a>
+
+    <!-- FIXED: Sağ alt — Yardımcı Menü -->
+    <div class="btn-helper">Yardımcı Menü</div>
+
+    <!-- Sayfa gövdesi -->
+    <main class="page">
+
+        <!-- Ana duyuru kartı — position: relative -->
+        <div class="card">
+
+            <!-- ABSOLUTE 1: Sol üst rozet "Ücretsiz" — z-index yüksek, başlığın üstünde -->
+            <span class="badge badge-free">Ücretsiz</span>
+
+            <!-- ABSOLUTE 2: Sağ üst rozet "24 Nisan" -->
+            <span class="badge badge-date">24 Nisan</span>
+
+            <!-- ABSOLUTE 3: Dekoratif daire — z-index düşük, içerik arkasında -->
+            <div class="deco-circle"></div>
+
+            <!-- ABSOLUTE 4: Konum kutusu — ortada sağda -->
+            <div class="badge badge-location">Konum: Konferans Salonu</div>
+
+            <!-- ABSOLUTE 5: "Son Kayıt" — zıplayan animasyon -->
+            <div class="badge badge-last">Son Kayıt</div>
+
+            <!-- Kart içeriği -->
+            <div class="card-content">
+                <h1>Teknoloji Topluluğu Etkinliği</h1>
+                <p>
+                    Bu örnek sayfada amaç; CSS position özelliklerini
+                    kullanarak tek bir duyuru kartı üzerinde relative, absolute,
+                    fixed, z-index, hover, cursor ve animasyon mantığını
+                    birlikte göstermektir.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>2026 - LAB Position Örnek Çalışması</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
