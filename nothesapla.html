@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>Öğrenci Not Hesaplama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 500px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Padding'in genişliği bozmasını engeller */
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 1px solid #999;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #d0d0d0;
+        }
+        .geri-don {
+            margin-top: 12px;
+            background-color: #f8f8f8;
+        }
+        #sonuc {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #eeeeee; /* Resimdeki gri arka plan */
+            min-height: 120px;
+            border-radius: 4px;
+        }
+        h2 { font-weight: bold; }
+        .bilgi { margin: 5px 0; }
+        .hata { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <script src="notscript.js"></script>
+    <div class="container">
+        <h2>Öğrenci Not Hesaplama</h2>
+
+        <input type="text" id="isim_soyisim" placeholder="Ad Soyad">
+        <input type="number" id="vize" placeholder="Vize Notu">
+        <input type="number" id="final" placeholder="Final Notu">
+        
+        <button id="degerbutonu" onclick="degerial()">Hesapla</button>
+        <button class="geri-don" type="button" onclick="window.location.href='index.html'">Ana Sayfaya Dön</button>
+
+        <div id="sonuc">
+            <p style="color: #666;">Sonuçlar burada görünecek...</p>
+        </div>
+    </div>
+        </div>
+    </body>
+</html>

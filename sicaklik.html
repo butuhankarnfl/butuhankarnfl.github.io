@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birim Dönüştürücü</title>
+    <style>
+        /* CSS Tasarımı */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f7f6;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        h2 { margin-top: 0; color: #333; }
+        label { display: block; margin-top: 15px; color: #666; font-size: 14px; }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover { background-color: #0056b3; }
+        .geri-don {
+            background-color: #6c757d;
+            margin-top: 10px;
+        }
+        .geri-don:hover { background-color: #545b62; }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: bold;
+            display: none; /* Başlangıçta gizli */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Birim Dönüştürücü</h2>
+
+        <label for="deger">Değer Giriniz:</label>
+        <input type="number" id="deger" placeholder="Örn: 50">
+
+        <label for="donusumTipi">Dönüşüm Tipi:</label>
+        <select id="donusumTipi">
+            <option value="m-km">Metre -> Kilometre</option>
+            <option value="c-f">Celsius -> Fahrenheit</option>
+            <option value="kg-gr">Kilogram -> Gram</option>
+        </select>
+
+        <button onclick="hesapla()">Hesapla</button>
+        <button class="geri-don" type="button" onclick="window.location.href='index.html'">Ana Sayfaya Dön</button>
+
+        <div id="sonucAlani" class="result-box"></div>
+    </div>
+
+    <script src="sicaklik.js"></script>
+</body>
+</html>
