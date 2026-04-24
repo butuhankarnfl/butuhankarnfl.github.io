@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hafta 7 — Etkinlik Kayıt</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Özel CSS -->
+  <link href="hafta7.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        🎓 Web Programlama
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center gap-2">
+          <li class="nav-item"><a class="nav-link" href="#etkinlikler">Etkinlikler</a></li>
+          <li class="nav-item"><a class="nav-link" href="#basvuru">Başvuru</a></li>
+          <li class="nav-item">
+            <button id="temaButon" class="btn btn-outline-light btn-sm px-3">
+              ☀️ Aydınlık Tema
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section class="hero text-white py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="badge bg-primary mb-3 px-3 py-2 fs-6 rounded-pill">
+            📅 2025 Bahar Dönemi
+          </span>
+          <h1 class="fw-bold mb-3">
+            Teknoloji &amp; Yazılım<br />Etkinlik Günleri
+          </h1>
+          <p class="fs-5 mb-4" style="color:rgba(255,255,255,0.75)">
+            Üç günlük workshop, konferans ve hackathon etkinliklerine hemen
+            kayıt olun. Sınırlı kontenjan — yerinizi şimdiden ayırtın!
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#basvuru" class="btn btn-primary btn-lg rounded-pill px-4">
+              ✍️ Hemen Başvur
+            </a>
+            <a href="#etkinlikler" class="btn btn-outline-light btn-lg rounded-pill px-4">
+              📋 Etkinlikleri İncele
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center d-none d-lg-block">
+          <div style="font-size:9rem;line-height:1">🚀</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ETKİNLİK KARTLARI  (en az 3 adet)
+  ════════════════════════════════════════ -->
+  <section id="etkinlikler" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-2">Etkinlikler</h2>
+      <p class="text-center mb-5" style="color:var(--muted)">
+        Bu dönem düzenlenen tüm teknik etkinliklere göz atın.
+      </p>
+
+      <!-- Bootstrap Grid — responsive -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Kart 1 -->
+        <div class="col">
+          <div class="feature-card h-100 p-4">
+            <div class="card-icon">🧑‍💻</div>
+            <h5 class="fw-bold mb-2">Web Geliştirme Workshop</h5>
+            <p style="color:var(--muted)" class="mb-3">
+              HTML, CSS ve Bootstrap ile modern arayüzler oluşturmayı
+              uygulamalı olarak öğrenin.
+            </p>
+            <span class="badge bg-primary">10 Mayıs 2025</span>
+            <span class="badge bg-secondary ms-1">Ücretsiz</span>
+          </div>
+        </div>
+
+        <!-- Kart 2 -->
+        <div class="col">
+          <div class="feature-card h-100 p-4">
+            <div class="card-icon">🤖</div>
+            <h5 class="fw-bold mb-2">Yapay Zeka Konferansı</h5>
+            <p style="color:var(--muted)" class="mb-3">
+              Makine öğrenmesi ve büyük dil modellerinin güncel kullanım
+              alanları sektör uzmanlarınca ele alınacak.
+            </p>
+            <span class="badge bg-warning text-dark">15 Mayıs 2025</span>
+            <span class="badge bg-danger ms-1">Sınırlı Kontenjan</span>
+          </div>
+        </div>
+
+        <!-- Kart 3 -->
+        <div class="col">
+          <div class="feature-card h-100 p-4">
+            <div class="card-icon">⚡</div>
+            <h5 class="fw-bold mb-2">24 Saatlik Hackathon</h5>
+            <p style="color:var(--muted)" class="mb-3">
+              Takımınızı oluşturun, 24 saat içinde çalışan bir proje
+              geliştirin ve ödüller kazanın.
+            </p>
+            <span class="badge bg-success">22 Mayıs 2025</span>
+            <span class="badge bg-info text-dark ms-1">Ödüllü</span>
+          </div>
+        </div>
+
+        <!-- Kart 4 (bonus) -->
+        <div class="col">
+          <div class="feature-card h-100 p-4">
+            <div class="card-icon">🔐</div>
+            <h5 class="fw-bold mb-2">Siber Güvenlik Semineri</h5>
+            <p style="color:var(--muted)" class="mb-3">
+              Ağ güvenliği, Linux hardening ve etik hacking konularında
+              yoğun bir yarım günlük seminer.
+            </p>
+            <span class="badge bg-primary">28 Mayıs 2025</span>
+            <span class="badge bg-secondary ms-1">Ücretsiz</span>
+          </div>
+        </div>
+
+        <!-- Kart 5 (bonus) -->
+        <div class="col">
+          <div class="feature-card h-100 p-4">
+            <div class="card-icon">📱</div>
+            <h5 class="fw-bold mb-2">Mobil Uygulama Geliştirme</h5>
+            <p style="color:var(--muted)" class="mb-3">
+              React Native ile cross-platform mobil uygulama geliştirme
+              temelleri uygulamalı workshop.
+            </p>
+            <span class="badge bg-warning text-dark">3 Haziran 2025</span>
+            <span class="badge bg-secondary ms-1">Ücretsiz</span>
+          </div>
+        </div>
+
+        <!-- Kart 6 (bonus) -->
+        <div class="col">
+          <div class="feature-card h-100 p-4">
+            <div class="card-icon">🗄️</div>
+            <h5 class="fw-bold mb-2">Veritabanı Yönetimi</h5>
+            <p style="color:var(--muted)" class="mb-3">
+              SQL ve NoSQL veritabanlarını karşılaştırmalı olarak inceleyin,
+              gerçek proje senaryolarıyla pratik yapın.
+            </p>
+            <span class="badge bg-success">10 Haziran 2025</span>
+            <span class="badge bg-info text-dark ms-1">Sertifikalı</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BAŞVURU FORMU
+  ════════════════════════════════════════ -->
+  <section id="basvuru" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="form-section p-4 p-md-5">
+            <h2 class="fw-bold mb-1">Etkinlik Başvurusu</h2>
+            <p class="mb-4" style="color:var(--muted)">
+              Aşağıdaki formu doldurarak etkinliğe kayıt olabilirsiniz.
+            </p>
+
+            <!-- Uyarı alanı -->
+            <div id="uyariAlani" class="alert alert-danger rounded-3 mb-4"></div>
+
+            <form id="basvuruFormu" novalidate>
+
+              <!-- Ad Soyad -->
+              <div class="mb-3">
+                <label for="ad" class="form-label">Ad Soyad *</label>
+                <input type="text" id="ad" class="form-control rounded-3"
+                       placeholder="Adınız ve soyadınız" />
+              </div>
+
+              <!-- E-posta -->
+              <div class="mb-3">
+                <label for="email" class="form-label">E-posta *</label>
+                <input type="email" id="email" class="form-control rounded-3"
+                       placeholder="ornek@universite.edu.tr" />
+              </div>
+
+              <!-- Bölüm -->
+              <div class="mb-3">
+                <label for="bolum" class="form-label">Bölüm *</label>
+                <select id="bolum" class="form-select rounded-3">
+                  <option value="">-- Bölüm seçin --</option>
+                  <option>Bilgisayar Mühendisliği</option>
+                  <option>Yazılım Mühendisliği</option>
+                  <option>Bilgisayar ve Öğretim Teknolojileri</option>
+                  <option>Elektrik-Elektronik Mühendisliği</option>
+                  <option>Diğer</option>
+                </select>
+              </div>
+
+              <!-- Katılmak istediği etkinlik -->
+              <div class="mb-3">
+                <label for="etkinlik" class="form-label">Katılmak İstediğiniz Etkinlik *</label>
+                <textarea id="etkinlik" class="form-control rounded-3" rows="3"
+                          placeholder="Hangi etkinliğe / etkinliklere katılmak istiyorsunuz?"></textarea>
+              </div>
+
+              <!-- KVKK -->
+              <div class="mb-4 form-check">
+                <input type="checkbox" id="kvkk" class="form-check-input" />
+                <label for="kvkk" class="form-check-label" style="color:var(--muted)">
+                  Kişisel verilerimin işlenmesine ilişkin KVKK aydınlatma metnini
+                  okudum ve onaylıyorum. *
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg w-100 rounded-3">
+                📨 Başvuruyu Tamamla
+              </button>
+            </form>
+
+            <!-- Sonuç alanı -->
+            <div id="sonucAlani" class="mt-4"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="py-4 mt-2 text-center">
+    <div class="container">
+      <p class="mb-1">
+        🎓 Marmara Üniversitesi — Web Programlama Dersi &nbsp;|&nbsp; Hafta 7 Laboratuvar Uygulaması
+      </p>
+      <small>Bootstrap 5.3 + Vanilla JavaScript</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Özel JS -->
+  <script src="hafta7script.js"></script>
+</body>
+</html>

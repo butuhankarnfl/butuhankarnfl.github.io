@@ -1,0 +1,120 @@
+/* ── Tema değişkenleri ── */
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --border: rgba(255,255,255,0.08);
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* ── Açık tema ── */
+body.light-theme {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --border: rgba(0,0,0,0.08);
+  --text: #1e293b;
+  --muted: #64748b;
+  --accent: #2563eb;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: rgba(15,23,42,0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+body.light-theme .navbar {
+  background: rgba(255,255,255,0.9) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.navbar-brand { font-weight: 700; letter-spacing: -0.5px; }
+
+/* ── Hero ── */
+.hero {
+  min-height: 420px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+  top: -100px; right: -100px;
+  pointer-events: none;
+}
+body.light-theme .hero {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+.hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; }
+
+/* ── Kartlar ── */
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Form ── */
+.form-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+}
+.form-control, .form-select, .form-check-input {
+  background-color: rgba(255,255,255,0.05) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+body.light-theme .form-control,
+body.light-theme .form-select {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25) !important;
+}
+.form-label { color: var(--muted); font-size: 0.9rem; font-weight: 500; }
+
+/* ── Uyarı & sonuç ── */
+#uyariAlani { display: none; }
+#sonucAlani { display: none; }
+.ozet-kart {
+  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(16,185,129,0.1));
+  border: 1px solid rgba(59,130,246,0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* ── Footer ── */
+footer {
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* ── Tema butonu ── */
+#temaButon { transition: all 0.3s; }
